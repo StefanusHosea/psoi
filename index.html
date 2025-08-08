@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!---
+  
+  PSOI Jakarta
+  Initial: v08.08.2025
+  Codecrafted by hello@stefanushosea.com
+  
+--->
+<html dev="stefanus@hosea.id" lang="en">
+<head>
+	<title>PSOI Jakarta</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" >
+	<meta name="apple-mobile-web-app-title" content="PSOI Jakarta" >
+	<meta name="theme-color" content="#f04e23">
+	<meta name="theme-color" content="#f04e23" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#f04e23" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-navbutton-color" content="#341e13" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#f04e23" />
+	<link rel="manifest" href="assets/site.webmanifest" >
+	<meta name="title" content="PSOI Jakarta">
+	<meta name="description" content="The Indonesian Surfing Association (PSOI) Jakarta aim to promote and elevate the sport of surfing in Indonesia by fostering a culture of inclusivity, safety, and excellence.">
+	<meta name="author" content="Stefanus Hosea" />
+	<meta name="keywords"
+		content="psoi, jakarta, surf, surfing, selancar, ombak, indonesia" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="PSOI Jakarta" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="PSOI Jakarta">
+	<meta name="application-name" content="PSOI Jakarta">
+	<meta property="og:url" content="https://surf.psoijkt.com">
+	<meta property="og:title" content="PSOI Jakarta">
+	<meta property="og:description" content="The Indonesian Surfing Association (PSOI) Jakarta aim to promote and elevate the sport of surfing in Indonesia by fostering a culture of inclusivity, safety, and excellence.">
+	<meta property="og:image" content="assets/share.jpg">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="video">
+		<video class="video" autoplay loop muted playsinline>
+			<source src="assets/video.mp4" type="video/mp4">
+		</video>
+	</div>
+
+
+		<header>
+			<div class="logo">
+				<a href="https://www.psoijkt.com">
+					<img src="assets/logo.svg" alt="PSOI Jakarta">
+				</a>
+			</div>
+			<div class="tagline">
+				<h2>The Indonesian Wave Surfing Association</h2>
+				<h1>Official Surfing Team of Jakarta</h1>
+			</div>
+
+			<!-- Add this before </body> -->
+			<script>
+			const h2 = document.querySelector('.tagline h2');
+			const h1 = document.querySelector('.tagline h1');
+
+			// Text options
+			const h2Texts = [
+			"The Indonesian Wave Surfing Association",
+			"Persatuan Selancar Ombak Indonesia"
+			];
+			const h1Texts = [
+			"Official Surfing Team of Jakarta",
+			"Tim Selancar Resmi Jakarta"
+			];
+
+			let idx = 0;
+
+			// Add fade CSS
+			const style = document.createElement('style');
+			style.textContent = `
+			.fade {
+				opacity: 0;
+				transition: opacity 0.5s;
+			}
+			.show {
+				opacity: 1;
+				transition: opacity 0.5s;
+			}
+			`;
+			document.head.appendChild(style);
+
+			// Initialize
+			h2.classList.add('show');
+			h1.classList.add('show');
+
+			function cycleText() {
+			// Fade out h2
+			h2.classList.remove('show');
+			h2.classList.add('fade');
+			setTimeout(() => {
+				// Change h2 text
+				idx = (idx + 1) % h2Texts.length;
+				h2.textContent = h2Texts[idx];
+				h2.classList.remove('fade');
+				h2.classList.add('show');
+				// Fade out h1 after 400ms
+				setTimeout(() => {
+				h1.classList.remove('show');
+				h1.classList.add('fade');
+				setTimeout(() => {
+					h1.textContent = h1Texts[idx];
+					h1.classList.remove('fade');
+					h1.classList.add('show');
+				}, 300); // fade in h1
+				}, 0); // delay between h2 and h1
+			}, 300); // fade in h2
+			}
+
+			setInterval(cycleText, 5000);
+			</script>
+
+		</header>
+
+	<div id="content">
+
+		<section id="featured">
+			<main class="border-bottom">
+				<a href="https://www.youtube.com/watch?v=yydct2ZBuH0">
+					<div id="thumbnail">
+						<img src="/assets/rwpw.jpg">
+						<img class="yt-overlay" src="/assets/icons/yt.svg" alt="YouTube Play">
+					</div>
+				</a>
+			</main>
+		</section>
+
+		<section id="team" class="team">
+			<h3>ATLET KAMI</h3>
+			<div class="team-container">
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/dhimas-shabil/">
+						<img src="https://www.psoijkt.com/assets/dhimas-370x335.jpg" alt="Dhimas Shabil">
+						<p>Dhimas Shabil</p>
+						<span>Men's Longboard</span>
+					</a>
+				</div>
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/hiroshi-setiadi/">
+						<img src="https://www.psoijkt.com/assets/hiroshi-370x335.jpg" alt="Hiroshi Setiadi">
+						<p>Hiroshi Setiadi</p>
+						<span>Men's Shortboard</span>
+					</a>
+				</div>
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/janiati-love-hansel/">
+						<img src="https://www.psoijkt.com/assets/cinta-370x335.jpg" alt="Cinta Hansel">
+						<p>Cinta Hansel</p>
+						<span>Women's Shortboard</span>
+					</a>
+				</div>
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/jasmine-michelle-studer/">
+						<img src="https://www.psoijkt.com/assets/jasmine-370x335.jpg" alt="Jasmine Studer">
+						<p>Jasmine Studer</p>
+						<span>Women's Shortboard</span>
+					</a>
+				</div>
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/varun-satria-tandjung/">
+						<img src="https://www.psoijkt.com/assets/varun-370x335.jpg" alt="Varun Tandjung">
+						<p>Varun Tandjung</p>
+						<span>Men's Shortboard</span>
+					</a>
+				</div>
+				<div class="team-member">
+					<a href="https://www.psoijkt.com/team/westen-sulhan-hirst/">
+						<img src="https://www.psoijkt.com/assets/westen-370x335.jpg" alt="Westen Hirst">
+						<p>Westen Hirst</p>
+						<span>Men's Shortboard</span>
+					</a>
+				</div>
+			</div>
+
+			<script>
+				const slider = document.querySelector('.team-container');
+				let isDown = false;
+				let startX;
+				let scrollLeft;
+
+				slider.addEventListener('mousedown', (e) => {
+				isDown = true;
+				slider.classList.add('active');
+				startX = e.pageX - slider.offsetLeft;
+				scrollLeft = slider.scrollLeft;
+				});
+
+				slider.addEventListener('mouseleave', () => {
+				isDown = false;
+				});
+
+				slider.addEventListener('mouseup', () => {
+				isDown = false;
+				});
+
+				slider.addEventListener('mousemove', (e) => {
+				if (!isDown) return;
+				e.preventDefault();
+				const x = e.pageX - slider.offsetLeft;
+				const walk = (x - startX) * 1; // 1 = scroll speed multiplier
+				slider.scrollLeft = scrollLeft - walk;
+				});
+
+				// Mobile touch support
+				slider.addEventListener('touchstart', (e) => {
+				startX = e.touches[0].pageX - slider.offsetLeft;
+				scrollLeft = slider.scrollLeft;
+				});
+
+				slider.addEventListener('touchmove', (e) => {
+				const x = e.touches[0].pageX - slider.offsetLeft;
+				const walk = (x - startX) * 1;
+				slider.scrollLeft = scrollLeft - walk;
+				});
+			</script>
+		</section>
+
+		<section id="release">
+			<main class="border-top">
+				<h3>RILIS MEDIA</h3>
+				<div class="media-container">
+					<div class="media-content">
+						<a href="https://www.psoijkt.com/release/rip-curl-cup-padang-padang-2025/">
+							<img src="https://www.psoijkt.com/assets/Rip-Curl-Cup-Padang-Padang-2025-Westen-Hirst-Jasmine-Studer-PSOI-DKI-Jakarta-1170x658.webp" alt="Media Release">
+							<p>Dua Atlet Selancar Indonesia Pecahkan Rekor di Rip Curl Cup Padang Padang 2025</p>
+						</a>
+						<a class="more-link" href="https://www.psoijkt.com/release/rip-curl-cup-padang-padang-2025/">Selengkapnya</a>
+					</div>
+					<div class="media-content">
+						<a href="https://www.psoijkt.com/release/pon-xxi/">
+							<img src="https://www.psoijkt.com/assets/PXL_20240914_085717809-1170x658.jpg" alt="Media Release">
+							<p>PSOI DKI Jakarta di PON XXI Aceh-Sumut 2024: Perjuangan dan Prestasi!</p>
+						</a>
+						<a class="more-link" href="https://www.psoijkt.com/release/pon-xxi/">Selengkapnya</a>
+					</div>
+				</div>
+			</main>
+		</section>
+
+	</div>
+
+	<footer>
+		<a href="https://www.psoijkt.com">
+			<img src="/assets/footer.png" alt="#JakartaDatangJakartaMenang">
+		</a>
+		<div>
+			<span>© 2024-<span id="year"></span> Persatuan Selancar Ombak Indonesia • Pengurus Provinsi DKI Jakarta</span>
+		</div>
+	</footer>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
