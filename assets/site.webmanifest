@@ -1,6 +1,10 @@
 {
   "name": "PSOI Jakarta",
   "short_name": "PSOI Jakarta",
+  "display": "standalone",
+  "theme_color": "#f04e23",
+  "background_color": "#f04e23",
+  "start_url": "./",
   "icons": [
     {
       "src": "/assets/web-app-manifest-192x192.png",
@@ -14,8 +18,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#f04e23",
-  "background_color": "#f04e23",
-  "display": "standalone"
+  ]
 }
