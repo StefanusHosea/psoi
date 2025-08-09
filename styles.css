@@ -442,7 +442,7 @@ footer img.eh{
 @media (max-width: 600px) {
 	.logo{
 		max-width: 85px;
-    	margin: 25px auto;
+    	margin: 18px auto;
 	}
 	.team-container {
 		-webkit-mask-image: linear-gradient(to left, transparent, black 25%);
