@@ -415,8 +415,8 @@ footer span{
 }
 footer .stakeholder{
 	display:flex;
-	gap:2.5rem;
-	max-width: 200px;
+	gap:2rem;
+	max-width: 300px;
 	margin: 0 auto 1.5rem;
 }
 footer .stakeholder img:hover{
